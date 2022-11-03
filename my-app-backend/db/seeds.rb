@@ -77,7 +77,7 @@ d_price = Player.create(
     hr: nil,
     rbi: nil,
     jersey_number: 33,
-    team_id: boston_red_sox
+    team_id: boston_red_sox.id
 )
 
 r_cano = Player.create(
