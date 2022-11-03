@@ -11,13 +11,16 @@ class ApplicationController < Sinatra::Base
     teams.to_json(include: [:players])
   end
 
-  # post '/teams' do
-  #   message = Message.create(
-  #     body: params[:body],
-  #     username: params[:username]
-  #   )
-  #   message.to_json
-  # end
+  post '/teams' do
+    teams = Team.new(params)
+
+    if teams.save
+      teams.to_json(include: [:players])
+    else
+      { errors: teams.errors.full_messages }.to_json
+    end
+    
+  end
 
   # patch '/teams/:id' do
   #   message = Message.find(params[:id])
