@@ -23,7 +23,7 @@ ny_mets = Team.create(
 la_angels = Team.create(
     name: "Angels",
     location: "Los Angeles",
-    league: "National League"
+    league: "American League"
 )
 
 la_dodgers = Team.create(
