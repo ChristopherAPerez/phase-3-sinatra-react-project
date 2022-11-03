@@ -51,7 +51,7 @@ class ApplicationController < Sinatra::Base
 
   get '/players' do
     players = Player.all
-    players.to_json
+    players.to_json(include: [:team])
 
   end
 
@@ -59,7 +59,7 @@ class ApplicationController < Sinatra::Base
     players = Player.new(params)
 
     if players.save
-      players.to_json
+      players.to_json(include: [:team])
     else
       { errors: players.errors.full_messages }.to_json
     end
@@ -84,7 +84,7 @@ class ApplicationController < Sinatra::Base
       team_id: params[:team_id]
     )
 
-    teams.to_json
+    teams.to_json(include: [:team])
 
   end
 
@@ -93,7 +93,7 @@ class ApplicationController < Sinatra::Base
 
     players.destroy
 
-    players.to_json
+    players.to_json(include: [:team])
 
   end
 
