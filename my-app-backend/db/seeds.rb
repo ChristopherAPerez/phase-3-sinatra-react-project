@@ -26,31 +26,31 @@ la_angels = Team.create(
     league: "National League"
 )
 
-las_dodgers = Teams.create(
+la_dodgers = Team.create(
     name: "Dodgers",
     location: "Los Angeles",
     league: "National League"
 )
 
-detroit_tigers = Teams.create(
+detroit_tigers = Team.create(
     name: "Tigers",
     location: "Detroit",
     league: "American League"
 )
 
-sf_giants = Teams.create(
+sf_giants = Team.create(
     name: "Giants",
     location: "San Francisco",
     league: "National League"
 )
 
-texas_rangers = Teams.create(
+texas_rangers = Team.create(
     name: "Rangers",
     location: "Texas",
     league: "American League"
 )
 
-a_judge = Players.create(
+a_judge = Player.create(
     name: "Aaron Judge",
     position: "Outfielder",
     games: 162,
@@ -58,14 +58,14 @@ a_judge = Players.create(
     era: nil,
     win: nil,
     loss: nil,
-    batting_average: .325,
+    batting_average: 325,
     hr: 62,
     rbi: 120,
     jersey_number: 99,
     team_id: ny_yankees.id
 )
 
-d_price = Players.create(
+d_price = Player.create(
     name: "David Price",
     position: "Pitcher",
     games: 30,
@@ -80,7 +80,7 @@ d_price = Players.create(
     team_id: boston_red_sox
 )
 
-r_cano = Players.create(
+r_cano = Player.create(
     name: "Robinson Cano",
     position: "Second Baseman",
     games: 114,
@@ -88,14 +88,14 @@ r_cano = Players.create(
     era: nil,
     win: nil,
     loss: nil,
-    batting_average: .302,
+    batting_average: 302,
     hr: 22,
     rbi: 99,
     jersey_number: 22,
     team_id: ny_mets.id
 )
 
-m_trout = Players.create(
+m_trout = Player.create(
     name: "Mike Trout",
     position: "Outfielder",
     games: 135,
@@ -103,14 +103,14 @@ m_trout = Players.create(
     era: nil,
     win: nil,
     loss: nil,
-    batting_average: .290,
+    batting_average: 290,
     hr: 32,
     rbi: 111,
     jersey_number: 27,
     team_id: la_angels.id
 )
 
-c_kershaw = Players.create(
+c_kershaw = Player.create(
     name: "Clayton Kershaw",
     position: "Pitcher",
     games: 30,
@@ -118,14 +118,14 @@ c_kershaw = Players.create(
     era: 2.45,
     win: 14,
     loss: 9,
-    batting_average: .223,
+    batting_average: 223,
     hr: 1,
     rbi: 3,
     jersey_number: 22,
     team_id: la_dodgers.id
 )
 
-j_verlander = Players.create(
+j_verlander = Player.create(
     name: "Justin Verlander",
     position: "Pitcher",
     games: 23,
@@ -140,7 +140,7 @@ j_verlander = Players.create(
     team_id: detroit_tigers.id
 )
 
-e_longoria = Players.create(
+e_longoria = Player.create(
     name: "Evan Longoria",
     position: "Third Baseman",
     games: 145,
@@ -148,14 +148,14 @@ e_longoria = Players.create(
     era: nil,
     win: nil,
     loss: nil,
-    batting_average: .333,
+    batting_average: 333,
     hr: 12,
     rbi: 65,
-    jersey_number: ,
+    jersey_number: 10,
     team_id: sf_giants.id
 )
 
-m_young = Players.create(
+m_young = Player.create(
     name: "Michael Young",
     position: "Shortstop",
     games: 123,
@@ -163,7 +163,7 @@ m_young = Players.create(
     era: nil,
     win: nil,
     loss: nil,
-    batting_average: .294,
+    batting_average: 294,
     hr: 18,
     rbi: 88,
     jersey_number: 10,
