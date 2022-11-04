@@ -12,7 +12,8 @@
   border: 10px solid blue;
   color: blue;
   max-width: 800px;
-  height: 500px;
+  min-height: 500px;
+  height: auto;
   margin: 100px auto;
   color: white;
 }
