@@ -3,12 +3,13 @@ import Header from "./Header";
 import NavBar from "./NavBar.js"
 import Teams from "./Teams.js"
 import Players from "./Players.js"
+import TeamForm from "./TeamForm.js"
+import PlayerForm from "./PlayerForm.js"
 import { Routes, Route } from "react-router-dom";
 
 import './App.css';
 
 function App() {
-
   const [teams, setTeams] = useState([])
   const [players, setPlayers] = useState([])
   const [page, setPage] = useState("/")
@@ -34,12 +35,10 @@ function App() {
       <NavBar onChangePage={setPage} />
 
       <Routes>
-        <Route path="/teams" element={<Teams
-          teams={ teams }
-        />} />
-        <Route path="/players" element={<Players 
-          players={ players }
-        />} />
+        <Route path="/teams" element={<Teams teams={ teams } setTeams={ setTeams } />} />
+        <Route path="/players" element={<Players players={ players } setPlayers={ setPlayers } />} />
+        <Route path="/team_form" element={<TeamForm teams={ teams } setTeams={ setTeams } />}/>
+        <Route path="/player_form" element={<PlayerForm players={ players } setPlayers={ setPlayers } />}/>
       </Routes>
     </main>
   );
