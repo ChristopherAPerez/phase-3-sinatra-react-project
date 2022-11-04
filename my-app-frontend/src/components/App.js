@@ -10,12 +10,19 @@ import './App.css';
 function App() {
 
   const [teams, setTeams] = useState([])
+  const [players, setPlayers] = useState([])
   const [page, setPage] = useState("/")
 
   useEffect(() => {
     fetch("http://localhost:9292/teams")
       .then((r) => r.json())
       .then((teams) => setTeams(teams));
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:9292/players")
+      .then((r) => r.json())
+      .then((players) => setPlayers(players));
   }, []);
 
   console.log(page)
@@ -28,9 +35,11 @@ function App() {
 
       <Routes>
         <Route path="/teams" element={<Teams
-          teams={teams}
+          teams={ teams }
         />} />
-        <Route path="/players" element={<Players />} />
+        <Route path="/players" element={<Players 
+          players={ players }
+        />} />
       </Routes>
     </main>
   );
