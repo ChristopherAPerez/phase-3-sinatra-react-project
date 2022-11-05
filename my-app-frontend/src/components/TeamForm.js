@@ -29,11 +29,11 @@ function TeamForm( { teams, setTeams } ) {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label for="name">Name:</label>
+            <label>Name:</label>
             <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}/>
-            <label for="location">Location:</label>
+            <label>Location:</label>
             <input type="text" name="location" value={location} onChange={(e) => setLocation(e.target.value)}/>
-            <label for="league">League:</label>
+            <label>League:</label>
             <select name="league" onChange={handleChange}>
                 <option value="American League">American League</option>
                 <option value="National League">National League</option>

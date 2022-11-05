@@ -26,7 +26,16 @@ function App() {
       .then((players) => setPlayers(players));
   }, []);
 
-  console.log(page)
+  function handleUpdateMessage(updateTeam) {
+    const updatedTeam = teams.map((team) => {
+      if (team.id === updateTeam.id) {
+        return updateTeam;
+      } else {
+        return team;
+      }
+    });
+    setPlayers(updatedTeam);
+  }
 
   return (
     <main className="App">
@@ -35,10 +44,10 @@ function App() {
       <NavBar onChangePage={setPage} />
 
       <Routes>
-        <Route path="/teams" element={<Teams teams={ teams } setTeams={ setTeams } />} />
+        <Route path="/teams" element={<Teams teams={ teams } update={ handleUpdateMessage }/>} />
         <Route path="/players" element={<Players players={ players } setPlayers={ setPlayers } />} />
         <Route path="/team_form" element={<TeamForm teams={ teams } setTeams={ setTeams } />}/>
-        <Route path="/player_form" element={<PlayerForm players={ players } setPlayers={ setPlayers } />}/>
+        <Route path="/player_form" element={<PlayerForm players={ players } setPlayers={ setPlayers } teams= { teams }/>}/>
       </Routes>
     </main>
   );

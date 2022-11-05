@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import EditName from "./EditName";
+import EditLocation from "./EditLocation";
+import EditLeague from "./EditLeague";
 
-function Team({ team }) {
+function Team({ team, update }) {
+  const [isEditing, setIsEditing] = useState(false);
 
   return (
     <li>
-        <p>{team.name}</p>
-        <p>{team.location}</p>
-        <p>{team.league}</p>
+      {isEditing ? ( <EditName team={ team } update={ update }/> ) : ( <p>{team.name}</p> )}
+      <button onClick={() => setIsEditing((isEditing) => !isEditing)} >✏️</button>
+      {isEditing ? ( <EditLocation/> ) : ( <p>{team.location}</p> )}
+      {isEditing ? ( <EditLeague/> ) : ( <p>{team.league}</p> )}
     </li>
   );
 }
