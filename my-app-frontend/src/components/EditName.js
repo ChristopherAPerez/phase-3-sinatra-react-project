@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 
 function EditName({ team, update }) {
-    const [teamName, setTeamName] = useState(team.name)
+
+    const { name } = team.name 
+    
+    const [teamName, setTeamName] = useState(name)
 
     function handleFormSubmit(e) {
         e.preventDefault();
 
-        fetch(`http://localhost:9292/players/${team.id}`, {
+        fetch(`http://localhost:9292/teams/${team.id}`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
@@ -29,7 +32,7 @@ function EditName({ team, update }) {
             value={teamName}
             onChange={(e) => setTeamName(e.target.value)}
         />
-        <input type="submit" value="Save" />
+        <input type="submit"/>
         </form>
     )
 }
