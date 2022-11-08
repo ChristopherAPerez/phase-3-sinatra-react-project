@@ -57,6 +57,12 @@
   padding: 5px;
 }
 
+.link {
+  font-weight: bold;
+  color: black
+}
+
+
 .player {
   background-color: #de8a69;
   border: 5px solid #5e984b;
@@ -90,10 +96,6 @@
   margin-top: 15px;
 }
 
-.inputPlayer {
-  margin: 5px;
-}
-
 
 .playerForm {
   background-color: #de8a69;
@@ -103,6 +105,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .inputPlayer {
