@@ -25,7 +25,7 @@ function Team({ team, update }) {
     }
 
   return (
-    <form className="team" onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit}>
         <table className="table">
         <thead>
           <tr>
