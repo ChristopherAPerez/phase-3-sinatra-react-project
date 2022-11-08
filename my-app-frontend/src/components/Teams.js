@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from "react";
 import Team from "./Team";
 
-function Teams({ teams, update }) {
+function Teams({ teams, update, handleDelete }) {
 
     return (
       <div>
@@ -11,6 +10,7 @@ function Teams({ teams, update }) {
               key={ team.id }
               team={ team }
               update={ update }
+              handleDelete={ handleDelete }
               />))}
         </ul>
       </div>

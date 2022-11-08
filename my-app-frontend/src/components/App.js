@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from "./Header";
+import Home from "./Home";
 import NavBar from "./NavBar.js"
 import Teams from "./Teams.js"
 import Players from "./Players.js"
@@ -48,7 +49,12 @@ function App() {
     setPlayers(updatedPlayer);
   }
 
-  function handleDelete(id) {
+  function handleDeleteTeam(id) {
+    const updatedTeam = teams.filter((team) => team.id !== id);
+    setTeams(updatedTeam);
+  }
+
+  function handleDeletePlayer(id) {
     const updatedPlayers = players.filter((player) => player.id !== id);
     setPlayers(updatedPlayers);
   }
@@ -60,8 +66,9 @@ function App() {
       <NavBar onChangePage={setPage} />
 
       <Routes>
-        <Route path="/teams" element={<Teams teams={ teams } update={ handleUpdateTeam }/>} />
-        <Route path="/players" element={<Players players={ players } setPlayers={ setPlayers } update={ handleUpdatePlayer } handleDelete={ handleDelete } />} />
+      <Route path="/home" element={<Home teams={ teams } />} />
+        <Route path="/teams" element={<Teams teams={ teams } update={ handleUpdateTeam } handleDelete={ handleDeleteTeam }/>} />
+        <Route path="/players" element={<Players players={ players } setPlayers={ setPlayers } update={ handleUpdatePlayer } handleDelete={ handleDeletePlayer } />} />
         <Route path="/team_form" element={<TeamForm teams={ teams } setTeams={ setTeams } />}/>
         <Route path="/player_form" element={<PlayerForm players={ players } setPlayers={ setPlayers } teams= { teams }/>}/>
       </Routes>

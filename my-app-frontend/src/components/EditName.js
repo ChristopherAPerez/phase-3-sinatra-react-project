@@ -31,7 +31,7 @@ function EditName({ team, update }) {
             value={teamName}
             onChange={(e) => setTeamName(e.target.value)}
         />
-        <input type="submit" value="save"/>
+        <input type="submit" value="✅"/>
         </form>
     )
 }

@@ -29,7 +29,7 @@ function EditName({ team, update }) {
             value={teamLocation}
             onChange={(e) => setTeamLocation(e.target.value)}
         />
-        <input type="submit" value="save"/>
+        <input type="submit" value="✅"/>
         </form>
     )
 }

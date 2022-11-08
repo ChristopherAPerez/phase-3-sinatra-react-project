@@ -3,7 +3,7 @@ import EditName from "./EditName";
 import EditLocation from "./EditLocation";
 import EditLeague from "./EditLeague";
 
-function Team({ team, update }) {
+function Team({ team, update, handleDelete }) {
   const [isEditing, setIsEditing] = useState(false);
 
   function updateSwitch(updatedChange) {
@@ -11,12 +11,36 @@ function Team({ team, update }) {
     update(updatedChange);
   }
 
+  function handleDeleteClick() {
+    fetch(`http://localhost:9292/teams/${team.id}`, {
+      method: "DELETE",
+    });
+
+    handleDelete(team.id);
+  }
+
   return (
-    <ul className="team">
-      {isEditing ? ( <EditName team={ team } update={ updateSwitch }/> ) : ( <p>{team.name}</p> )}
-      {isEditing ? ( <EditLocation team={ team } update={ updateSwitch }/> ) : ( <p>{team.location}</p> )}
-      {isEditing ? ( <EditLeague team={ team } update={ updateSwitch }/> ) : ( <p>{team.league}</p> )}
-      <button onClick={() => setIsEditing((isEditing) => !isEditing)} >✏️</button>
+    <ul className="team">          
+    <table className="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+        <th>League</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{isEditing ? ( <EditName team={ team } update={ updateSwitch }/> ) : team.name}</td>
+        <td>{isEditing ? ( <EditLocation team={ team } update={ updateSwitch }/> ) :  team.location }</td>
+        <td>{isEditing ? ( <EditLeague team={ team } update={ updateSwitch }/> ) : team.league}</td>
+        <td>
+          <button onClick={() => setIsEditing((isEditing) => !isEditing)} >✏️</button>
+          <button onClick={handleDeleteClick} >❌</button>
+        </td>
+      </tr>
+    </tbody>
+    </table>
     </ul>
   );
 }

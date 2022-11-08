@@ -31,7 +31,7 @@ function EditName({ team, update }) {
             <option value="American League">American League</option>
             <option value="National League">National League</option>
         </select>
-        <input type="submit" value="Save" />
+        <input type="submit" value="✅" />
         </form>
     )
 }
