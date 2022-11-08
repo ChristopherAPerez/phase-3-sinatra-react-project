@@ -1,7 +1,9 @@
 import React from 'react';
 
 
-function TeamOptions( { team } ){
+function TeamOptions( { teams, team, setTeamID } ){
+
+    
 
     return (
         <option value={team.id}>{team.name}</option>

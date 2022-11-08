@@ -70,7 +70,7 @@ function App() {
         <Route path="/teams" element={<Teams teams={ teams } update={ handleUpdateTeam } handleDelete={ handleDeleteTeam }/>} />
         <Route path="/players" element={<Players players={ players } setPlayers={ setPlayers } update={ handleUpdatePlayer } handleDelete={ handleDeletePlayer } />} />
         <Route path="/team_form" element={<TeamForm teams={ teams } setTeams={ setTeams } />}/>
-        <Route path="/player_form" element={<PlayerForm players={ players } setPlayers={ setPlayers } teams= { teams }/>}/>
+        <Route path="/player_form" element={<PlayerForm players={ players } setPlayers={ setPlayers } teams= { teams } />}/>
       </Routes>
     </main>
   );

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"
 
 function TeamForm( { teams, setTeams } ) {
     const [name, setName] = useState("")
     const [location, setLocation] = useState("")
     const [league, setLeague] = useState("")
+
+    const navigate = useNavigate()
 
     function handleChange(e){
         setLeague(e.target.value)
@@ -24,21 +27,33 @@ function TeamForm( { teams, setTeams } ) {
       }),
     })
       .then((r) => r.json())
-      .then((newTeam) => {setTeams([...teams, newTeam])});
+      .then((newTeam) => {setTeams([...teams, newTeam])})
+      navigate("/teams")
     }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="teamForm" onSubmit={handleSubmit}>
+            <h2>Add a Team</h2>
+
             <label>Name:</label>
-            <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}/>
+            <input className="inputPlayer" type="text" name="name" value={name} onChange={(e) => setName(e.target.value)}/>
+            
+            <br></br>
+
             <label>Location:</label>
-            <input type="text" name="location" value={location} onChange={(e) => setLocation(e.target.value)}/>
+            <input className="inputPlayer" type="text" name="location" value={location} onChange={(e) => setLocation(e.target.value)}/>
+            
+            <br></br>
+            
             <label>League:</label>
-            <select name="league" onChange={handleChange}>
+            <select className="inputPlayer" name="league" onChange={handleChange}>
                 <option value="American League">American League</option>
                 <option value="National League">National League</option>
             </select>
-            <input type="submit"/>
+            
+            <br></br>
+            
+            <input className="inputPlayer" type="submit"/>
         </form>
     );
 }

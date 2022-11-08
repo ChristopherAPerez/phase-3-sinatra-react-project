@@ -1,39 +1,40 @@
 :root {
   background-color: blue;
-  background-image: url("../images/mlb_teams.jpg");
+  /* background-image: url("../images/mlb_teams.jpg");
   background-size: auto;
-  background-repeat: repeat;
+  background-repeat: repeat; */
+
+  background: url("../images/mlb_teams.jpg") repeat center center fixed;
 }
 
 .App {
   text-align: center;
-  background-color: red;
   border-radius: 10px;
-  border: 10px solid blue;
+  border: 10px solid #14295d;
   color: blue;
   width: 90%;
   min-height: 500px;
   height: auto;
   margin: 100px auto;
-  color: white;
+  color: black;
+
+  background: url("../images/mlb_field.webp") repeat center center fixed;
 }
 
 .home {
-  background-color: blue;
-  border: 5px solid white;
+  background-color: #de8a69;
+  border: 5px solid #5e984b;
   border-radius: 10px;
+  text-align: center;
   width: 90%;
-  content: "";
-  display: table;
-  clear: both;
-  margin-top: 5px;
+  margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .teamPlayers {
-  background-color: blue;
-  border: 5px solid white;
+  background-color: #de8a69;
+  border: 5px solid #5e984b;
   border-radius: 10px;
   text-align: center;
   float: left;
@@ -46,8 +47,8 @@
 }
 
 .team {
-  background-color: blue;
-  border: 5px solid white;
+  background-color: #de8a69;
+  border: 5px solid #5e984b;
   border-radius: 10px;
   align-content: center;
   text-align: center;
@@ -57,8 +58,8 @@
 }
 
 .player {
-  background-color: blue;
-  border: 5px solid white;
+  background-color: #de8a69;
+  border: 5px solid #5e984b;
   border-radius: 10px;
   align-content: center;
   text-align: center;
@@ -77,5 +78,34 @@
 
 .input {
   width: 50px;
+}
+
+.teamForm {
+  background-color: #de8a69;
+  border: 5px solid #5e984b;
+  border-radius: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.inputPlayer {
+  margin: 5px;
+}
+
+
+.playerForm {
+  background-color: #de8a69;
+  border: 5px solid #5e984b;
+  border-radius: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.inputPlayer {
+  margin: 5px;
 }
 
