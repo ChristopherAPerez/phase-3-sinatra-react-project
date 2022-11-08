@@ -3,7 +3,7 @@ import TableTeam from "./TableTeam"
 
 function Home( { teams } ) {
     return (
-        <div>
+        <div className="home">
             <ul>
                 {teams.map((team) => (
                     <TableTeam key={ team.id } team={ team }/>

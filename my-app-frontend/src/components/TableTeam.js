@@ -4,7 +4,7 @@ function TableTeam( { team } ) {
     const players = team.players
 
     return (
-        <div>
+        <div className="teamPlayers">
             <table>
                 <thead>
                     <tr>

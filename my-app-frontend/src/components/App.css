@@ -18,6 +18,29 @@
   color: white;
 }
 
+.home {
+  background-color: blue;
+  border: 5px solid white;
+  border-radius: 10px;
+  width: 90%;
+  content: "";
+  display: table;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.teamPlayers {
+  background-color: blue;
+  border: 5px solid white;
+  border-radius: 10px;
+  text-align: center;
+  float: left;
+  height: 470px;
+  width: 23%;
+  padding: 3 10px;
+}
+
 .team {
   background-color: blue;
   border: 5px solid white;
