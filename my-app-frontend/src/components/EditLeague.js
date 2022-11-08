@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 
 function EditName({ team, update }) {
-    const [teamLocation, setTeamLocation] = useState(team.location)
+    const [teamLeague, setTeamLeague] = useState("American League")
 
-    function handleFormSubmit(e) {
+    function handleChange(e){
+        setTeamLeague(e.target.value)
+    }
+
+    function handleSubmit(e) {
         e.preventDefault();
 
         fetch(`http://localhost:9292/teams/${team.id}`, {
@@ -12,24 +16,22 @@ function EditName({ team, update }) {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            team: team.name,
-            location: teamLocation,
-            league: team.league
+            name: team.name,
+            location: team.location,
+            league: teamLeague
         }),
         })
         .then((r) => r.json())
-        .then((updatedLocation) => update(updatedLocation));
+        .then((updatedLeague) => update(updatedLeague))
     }
 
     return (
-        <form onSubmit={handleFormSubmit}>
-        <input
-            type="text"
-            name="location"
-            value={teamLocation}
-            onChange={(e) => setTeamLocation(e.target.value)}
-        />
-        <input type="submit"/>
+        <form onSubmit={handleSubmit}>
+        <select name="league" onChange={handleChange}>
+            <option value="American League">American League</option>
+            <option value="National League">National League</option>
+        </select>
+        <input type="submit" value="Save" />
         </form>
     )
 }

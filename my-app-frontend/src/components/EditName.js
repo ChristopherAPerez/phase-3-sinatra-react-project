@@ -2,9 +2,7 @@ import React, { useState } from "react";
 
 function EditName({ team, update }) {
 
-    const { name } = team.name 
-    
-    const [teamName, setTeamName] = useState(name)
+    const [teamName, setTeamName] = useState(team.name)
 
     function handleFormSubmit(e) {
         e.preventDefault();
@@ -15,7 +13,7 @@ function EditName({ team, update }) {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            team: teamName,
+            name: teamName,
             location: team.location,
             league: team.league
         }),
@@ -29,10 +27,11 @@ function EditName({ team, update }) {
         <input
             type="text"
             name="name"
+            autoComplete="off"
             value={teamName}
             onChange={(e) => setTeamName(e.target.value)}
         />
-        <input type="submit"/>
+        <input type="submit" value="save"/>
         </form>
     )
 }

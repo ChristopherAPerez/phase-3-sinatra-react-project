@@ -84,7 +84,7 @@ class ApplicationController < Sinatra::Base
       team_id: params[:team_id]
     )
 
-    teams.to_json(include: [:team])
+    players.to_json(include: [:team])
 
   end
 

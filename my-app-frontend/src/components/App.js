@@ -26,7 +26,7 @@ function App() {
       .then((players) => setPlayers(players));
   }, []);
 
-  function handleUpdateMessage(updateTeam) {
+  function handleUpdateTeam(updateTeam) {
     const updatedTeam = teams.map((team) => {
       if (team.id === updateTeam.id) {
         return updateTeam;
@@ -34,7 +34,18 @@ function App() {
         return team;
       }
     });
-    setPlayers(updatedTeam);
+    setTeams(updatedTeam);
+  }
+
+  function handleUpdatePlayer(updatePlayer) {
+    const updatedPlayer = players.map((player) => {
+      if (player.id === updatePlayer.id) {
+        return updatePlayer;
+      } else {
+        return player;
+      }
+    });
+    setPlayers(updatedPlayer);
   }
 
   return (
@@ -44,8 +55,8 @@ function App() {
       <NavBar onChangePage={setPage} />
 
       <Routes>
-        <Route path="/teams" element={<Teams teams={ teams } update={ handleUpdateMessage }/>} />
-        <Route path="/players" element={<Players players={ players } setPlayers={ setPlayers } />} />
+        <Route path="/teams" element={<Teams teams={ teams } update={ handleUpdateTeam }/>} />
+        <Route path="/players" element={<Players players={ players } setPlayers={ setPlayers } update={ handleUpdatePlayer } />} />
         <Route path="/team_form" element={<TeamForm teams={ teams } setTeams={ setTeams } />}/>
         <Route path="/player_form" element={<PlayerForm players={ players } setPlayers={ setPlayers } teams= { teams }/>}/>
       </Routes>

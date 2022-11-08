@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import EditName from "./EditName";
 import EditLocation from "./EditLocation";
-// import EditLeague from "./EditLeague";
+import EditLeague from "./EditLeague";
 
 function Team({ team, update }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -12,12 +12,12 @@ function Team({ team, update }) {
   }
 
   return (
-    <li>
+    <ul className="team">
       {isEditing ? ( <EditName team={ team } update={ updateSwitch }/> ) : ( <p>{team.name}</p> )}
       {isEditing ? ( <EditLocation team={ team } update={ updateSwitch }/> ) : ( <p>{team.location}</p> )}
+      {isEditing ? ( <EditLeague team={ team } update={ updateSwitch }/> ) : ( <p>{team.league}</p> )}
       <button onClick={() => setIsEditing((isEditing) => !isEditing)} >✏️</button>
-      {/* {isEditing ? ( <EditLeague/> ) : ( <p>{team.league}</p> )} */}
-    </li>
+    </ul>
   );
 }
 

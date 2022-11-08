@@ -1,14 +1,6 @@
-import React, {useState, useEffect} from "react";
 import Player from "./Player";
 
-function Players() {
-  const [players, setPlayers] = useState([])
-
-  useEffect(() => {
-    fetch("http://localhost:9292/players")
-      .then((r) => r.json())
-      .then((players) => setPlayers(players));
-  }, []);
+function Players( { players, update } ) {
 
     return (
       <div>
@@ -17,6 +9,7 @@ function Players() {
             <Player
               key={ player.id }
               player={ player }
+              update={ update }
               />))}
         </ul>
       </div>

@@ -12,7 +12,7 @@ function EditName({ team, update }) {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({
-            team: team.name,
+            name: team.name,
             location: teamLocation,
             league: team.league
         }),
@@ -29,7 +29,7 @@ function EditName({ team, update }) {
             value={teamLocation}
             onChange={(e) => setTeamLocation(e.target.value)}
         />
-        <input type="submit"/>
+        <input type="submit" value="save"/>
         </form>
     )
 }
