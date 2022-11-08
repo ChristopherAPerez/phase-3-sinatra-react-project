@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Edit from "./Edit";
 
-function Player({ player, update }) {
+function Player({ player, update, handleDelete }) {
   const [isEditing, setIsEditing] = useState(false);
 
   function updateSwitch(updatedChange) {
@@ -9,8 +9,12 @@ function Player({ player, update }) {
     update(updatedChange);
   }
 
-  function handleDelete() {
-    
+  function handleDeleteClick() {
+    fetch(`http://localhost:9292/players/${player.id}`, {
+      method: "DELETE",
+    });
+
+    handleDelete(player.id);
   }
 
   return (
@@ -48,7 +52,7 @@ function Player({ player, update }) {
                 <td>{player.jersey_number > 0 ? "#" + player.jersey_number : "N/A"}</td>
                 <td>
                   <button onClick={() => setIsEditing((isEditing) => !isEditing)} >✏️</button>
-                  <button onClick={handleDelete} >❌</button>
+                  <button onClick={handleDeleteClick} >❌</button>
                 </td>
               </tr>
             </tbody>

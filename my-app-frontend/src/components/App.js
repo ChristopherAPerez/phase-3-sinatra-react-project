@@ -48,6 +48,11 @@ function App() {
     setPlayers(updatedPlayer);
   }
 
+  function handleDelete(id) {
+    const updatedPlayers = players.filter((player) => player.id !== id);
+    setPlayers(updatedPlayers);
+  }
+
   return (
     <main className="App">
       <Header />
@@ -56,7 +61,7 @@ function App() {
 
       <Routes>
         <Route path="/teams" element={<Teams teams={ teams } update={ handleUpdateTeam }/>} />
-        <Route path="/players" element={<Players players={ players } setPlayers={ setPlayers } update={ handleUpdatePlayer } />} />
+        <Route path="/players" element={<Players players={ players } setPlayers={ setPlayers } update={ handleUpdatePlayer } handleDelete={ handleDelete } />} />
         <Route path="/team_form" element={<TeamForm teams={ teams } setTeams={ setTeams } />}/>
         <Route path="/player_form" element={<PlayerForm players={ players } setPlayers={ setPlayers } teams= { teams }/>}/>
       </Routes>

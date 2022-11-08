@@ -1,6 +1,6 @@
 import Player from "./Player";
 
-function Players( { players, update } ) {
+function Players( { players, update, handleDelete } ) {
 
     return (
       <div>
@@ -10,6 +10,7 @@ function Players( { players, update } ) {
               key={ player.id }
               player={ player }
               update={ update }
+              handleDelete={ handleDelete }
               />))}
         </ul>
       </div>
