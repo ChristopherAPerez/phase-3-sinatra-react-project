@@ -51,3 +51,6 @@ $ bundle exec rake server
 [create repo]: https://docs.github.com/en/get-started/quickstart/create-a-repo
 [dbdiagram.io]: https://dbdiagram.io/
 [postman download]: https://www.postman.com/downloads/
+
+## Authors and acknowledgment
+All images used in this application belong rightfully to Official MLB and the their respectful artists.
