@@ -1,4 +1,4 @@
-# phase-3-sinatra-react-project
+# phase-3-sinatra-react-project: ⚾️ MLB All-Stars ⚾️
 
 ## Overview
 This application allows users to explore 
@@ -7,7 +7,7 @@ This application allows users to explore
 
 **LIVE LINK:** https://youtu.be/f1H_36bfVq4
 
-## Model: One-to-Many
+### Model: One-to-Many
 
 ![](my-app-frontend/src/images/model.png) 
 
@@ -15,12 +15,16 @@ This application allows users to explore
 
 #### Frontend Setup
 
-Let's take a quick tour of what we have so far.
-
 To get started, `cd` into the `my-app-frontend` directory. Then run:
 
 ```console
 $ npm install
+```
+
+After, start the react-app:
+
+```console
+$ npm start
 ```
 
 #### Backend Setup
@@ -31,9 +35,19 @@ In another terminal, `cd` into the `my-app-backend` directory, and run `bundle i
 $ bundle install
 ```
 
-Then, you can start your server with with `bundle exec rake server`.
+Finally, you can start your server with with `bundle exec rake server`.
 
 ```console
 $ bundle exec rake server
 ```
 
+## Resources
+
+- [create-react-app][]
+- [dbdiagram.io][]
+- [Postman][postman download]
+
+[create-react-app]: https://create-react-app.dev/docs/getting-started
+[create repo]: https://docs.github.com/en/get-started/quickstart/create-a-repo
+[dbdiagram.io]: https://dbdiagram.io/
+[postman download]: https://www.postman.com/downloads/
