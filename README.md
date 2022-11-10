@@ -7,25 +7,27 @@ This application allows users to explore
 
 **LIVE LINK:** https://youtu.be/f1H_36bfVq4
 
+![](my-app-frontend/src/images/model.png) 
 
 #### How to Run
 
-`npm start`
+## Frontend Setup
 
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Let's take a quick tour of what we have so far.
+
+To get started, `cd` into the `my-app-frontend` directory. Then run:
+
+```console
+$ npm install
+```
+
+## Backend Setup
+
+In another terminal, `cd` into the `my-app-backend` directory, and run `bundle install` to install the dependencies.
 
 ## Installation
 
 ```
-npm install -g node-modules
-```
-
-```
-npm install -g json-server
-```
-
-```
-npm install react-router-dom
+npm install
 ```
 
