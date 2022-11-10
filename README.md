@@ -11,9 +11,9 @@ This application allows users to explore
 
 ![](my-app-frontend/src/images/model.png) 
 
-#### How to Run/Installation
+## How to Run/Installation
 
-## Frontend Setup
+#### Frontend Setup
 
 Let's take a quick tour of what we have so far.
 
@@ -23,7 +23,7 @@ To get started, `cd` into the `my-app-frontend` directory. Then run:
 $ npm install
 ```
 
-## Backend Setup
+#### Backend Setup
 
 In another terminal, `cd` into the `my-app-backend` directory, and run `bundle install` to install the dependencies.
 
