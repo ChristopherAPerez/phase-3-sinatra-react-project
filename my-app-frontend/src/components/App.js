@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from "./Header";
+import PlayBall from "./PlayBall"
 import Home from "./Home";
 import NavBar from "./NavBar.js"
 import Teams from "./Teams.js"
@@ -7,7 +8,6 @@ import Players from "./Players.js"
 import TeamForm from "./TeamForm.js"
 import PlayerForm from "./PlayerForm.js"
 import { Routes, Route } from "react-router-dom";
-
 import './App.css';
 
 function App() {
@@ -66,7 +66,8 @@ function App() {
       <NavBar onChangePage={setPage} />
 
       <Routes>
-      <Route path="/home" element={<Home teams={ teams } />} />
+        <Route exact path="/" element={<PlayBall />} />
+        <Route path="/home" element={<Home teams={ teams } />} />
         <Route path="/teams" element={<Teams teams={ teams } update={ handleUpdateTeam } handleDelete={ handleDeleteTeam }/>} />
         <Route path="/players" element={<Players players={ players } setPlayers={ setPlayers } update={ handleUpdatePlayer } handleDelete={ handleDeletePlayer } />} />
         <Route path="/team_form" element={<TeamForm teams={ teams } setTeams={ setTeams } />}/>

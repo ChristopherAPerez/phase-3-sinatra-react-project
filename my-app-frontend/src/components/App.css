@@ -1,9 +1,5 @@
 :root {
   background-color: blue;
-  /* background-image: url("../images/mlb_teams.jpg");
-  background-size: auto;
-  background-repeat: repeat; */
-
   background: url("../images/mlb_teams.jpg") repeat center center fixed;
 }
 
@@ -17,8 +13,22 @@
   height: auto;
   margin: 100px auto;
   color: black;
-
   background: url("../images/mlb_field.webp") repeat center center fixed;
+}
+
+.playball {
+  background-color: #de8a69;
+  border: 5px solid #5e984b;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list {
+  margin-bottom: 15px;
 }
 
 .home {
