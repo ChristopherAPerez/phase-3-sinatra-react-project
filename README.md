@@ -11,7 +11,7 @@ This application allows users to explore
 
 ![](my-app-frontend/src/images/model.png) 
 
-#### How to Run
+#### How to Run/Installation
 
 ## Frontend Setup
 
@@ -27,9 +27,13 @@ $ npm install
 
 In another terminal, `cd` into the `my-app-backend` directory, and run `bundle install` to install the dependencies.
 
-## Installation
-
+```console
+$ bundle install
 ```
-npm install
+
+Then, you can start your server with with `bundle exec rake server`.
+
+```console
+$ bundle exec rake server
 ```
 
