@@ -7,6 +7,8 @@ This application allows users to explore
 
 **LIVE LINK:** https://youtu.be/f1H_36bfVq4
 
+## Model: One-to-Many
+
 ![](my-app-frontend/src/images/model.png) 
 
 #### How to Run
