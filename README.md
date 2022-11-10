@@ -1,7 +1,7 @@
 # phase-3-sinatra-react-project: ⚾️ MLB All-Stars ⚾️
 
 ## Overview
-This application allows users to explore 
+This application connnects a Javascript-React application with a Ruby-Sinatra database. Users can explore a generated database of MLB teams and players. Users may interact with the list of content rendered and Post, Patch, and Delete as they wish. 
 
 **LINK:** https://github.com/ChristopherAPerez/phase-3-sinatra-react-project
 
