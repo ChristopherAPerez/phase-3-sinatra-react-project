@@ -13,6 +13,16 @@ This application connnects a Javascript-React application with a Ruby-Sinatra da
 
 ## How to Run/Installation
 
+#### Install
+
+Clone the repository
+
+```console
+git clone git@github.com:juliendargelos/project.git
+```
+
+Then, `cd` phase-3-sinatra-react-project
+
 #### Frontend Setup
 
 To get started, `cd` into the `my-app-frontend` directory. Then run:
@@ -35,11 +45,17 @@ In another terminal, `cd` into the `my-app-backend` directory, and run `bundle i
 $ bundle install
 ```
 
+After, run the migrations and use the provided seeds.rb file to seed the database. This will provide data for the application.
+```console
+$ bundle exec rake db:migrate db:seed
+```
+
 Finally, you can start your server with with `bundle exec rake server`.
 
 ```console
 $ bundle exec rake server
 ```
+
 
 ## Resources
 
