@@ -45,7 +45,7 @@ In another terminal, `cd` into the `my-app-backend` directory, and run `bundle i
 $ bundle install
 ```
 
-You can check which and make sure  gems are installed.
+You can check which and make sure gems are installed.
 
 ```console
 $ gem list
