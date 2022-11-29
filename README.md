@@ -45,7 +45,7 @@ In another terminal, `cd` into the `my-app-backend` directory, and run `bundle i
 $ bundle install
 ```
 
-After, run the migrations and use the provided seeds.rb file to seed the database. This will provide data for the application.
+After, run the migrations and use the provided seeds.rb file to `seed` the database. This will provide data for the application.
 ```console
 $ bundle exec rake db:migrate db:seed
 ```
