@@ -4,7 +4,7 @@ function Team({ team, update }) {
 
     const [name, setName] = useState(team.name);
     const [location, setLocation] = useState(team.location);
-    const [league, setLeague] = useState(team.league);
+    const [league, setLeague] = useState("American League");
 
     function handleFormSubmit(e) {
         e.preventDefault();

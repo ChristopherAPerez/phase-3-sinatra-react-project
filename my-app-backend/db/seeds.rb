@@ -3,7 +3,7 @@ puts "🌱 Seeding spices..."
 # Seed your database here
 
 ny_yankees = Team.create(
-    name: "Yankess",
+    name: "Yankees",
     location: "New York",
     league: "American League"
 )
